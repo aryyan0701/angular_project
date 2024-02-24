@@ -1,0 +1,12 @@
+<!-- app.component.html -->
+<div class="container" *ngIf="!hideContent">
+  <p-card header="Welcome to our App" [style]="{ width: '360px' }">
+    <p-button (click)="navigateToLogin()" type="submit" label="Log In" styleClass="w-full mb-2"></p-button>
+    <p-button (click)="navigateToSignup()" type="submit" label="Sign Up" styleClass="w-full"></p-button>
+  </p-card>
+</div>
+
+<div class="flex justify-content-center align-items-center h-full">
+  <router-outlet></router-outlet>
+  <p-toast></p-toast>
+</div>

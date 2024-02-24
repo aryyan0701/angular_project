@@ -1,0 +1,70 @@
+<form [formGroup]="signupForm" (ngSubmit)="submitDeatils()">
+  <p-card header="Register" [style]="{ width: '360px' }">
+      <div class="field">
+          <label for="fullname"> Full Name </label>
+          <input
+            type="text"
+            pInputText
+            formControlName="fullname"
+            class="w-full"
+            name="fullname"
+            placeholder="Enter your full name"
+          />
+          <small *ngIf=" fullname.invalid && (fullname.dirty || fullname.touched) ">
+            <div *ngIf="fullname.errors?.['required']">Name is Required</div>
+            <div *ngIf="fullname.errors?.['pattern']">Enter a valid name</div>
+          </small>
+      </div>
+      <div class="field">
+          <label for="email"> Email </label>
+          <input
+            type="text"
+            pInputText
+            formControlName="email"
+            class="w-full"
+            name="email"
+            placeholder="Type your Email"
+          />
+          <small *ngIf=" email.invalid && (email.dirty || email.touched) ">
+            <div *ngIf="email.errors?.['required']">Email is Required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
+          </small>
+      </div>
+      <div class="field">
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            pInputText
+            formControlName="password"
+            class="w-full"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <small *ngIf=" password.invalid && (password.dirty || password.touched)" >
+            <div *ngIf="password.errors?.['required']">Password is Required</div>
+          </small>
+      </div>
+      <div class="field">
+          <label for="confirmpassword">Confirm Password </label>
+          <input
+              type="password"
+              pInputText
+              formControlName="confirmpassword"
+              class="w-full"
+              name="confirmpassword"
+              placeholder="Confirm password"
+          />
+          <small *ngIf=" confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" >
+              <div *ngIf="confirmpassword.errors?.['required']">Confirm the password</div>
+          </small>
+          <small class="block p-error" *ngIf="signupForm.hasError('passwordMatch')" >
+              Passwords should match.
+          </small>
+      </div>
+      
+      <p-button label="Register" styleclass="w-full" [disabled]="signupForm.invalid || signupForm.hasError('passwordMatch')" type="submit"></p-button>
+      <div class="mt-2">
+        Already have an account..?<a [routerLink]="['/login']" routerLinkActive="router-link-active" >Click Here</a> 
+      </div>
+  </p-card>
+</form>
