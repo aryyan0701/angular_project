@@ -1,0 +1,5 @@
+# Dependency directories
+/node_modules
+
+# JSON Server generated files
+/db.json
