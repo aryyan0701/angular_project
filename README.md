@@ -14,37 +14,6 @@ The User Form application is designed to provide a user registration and login s
 - JSON Server backend for storing user data
 - Angular frontend for user interaction
 
-## frontend folder Structure
-- The frontend app is structured as follows: 
-
-user_form/
-│
-├── frontend-app/ // Angular frontend application
-│ ├── src/ // Source code
-│ │ ├── app/ // Angular components, services, etc.
-│ │ ├── assets/ // Static assets like images, fonts, etc.
-│ │ ├── environments/ // Environment-specific configuration files
-│ │ ├── ...
-│ │ └── index.html // Entry HTML file for Angular app
-│ ├── angular.json // Angular project configuration
-│ ├── package.json // Frontend dependencies and scripts
-│ └── ...
-│
-└── ...
-
-
-- The backend app is structured as follows:
-
-user_form/
-│
-├── backend-app/ // JSON Server backend
-│ ├── db.json // JSON file containing database data
-│ ├── node_modules/ // Node.js modules (automatically generated)
-│ ├── package.json // Backend dependencies and scripts
-│ ├── server.js // Entry point for JSON Server
-│ └── ...
-│
-└── ...
 
 ## Additional Information
 - For more information about Angular, refer to the [Angular documentation](https://angular.io/docs).
@@ -76,5 +45,35 @@ To run the User Form application locally, follow these steps:
        cd frontend-app
        npm run start
 
+##  folder Structure
+- The frontend app is structured as follows: 
 
+user_form/
+│
+├── frontend-app/ // Angular frontend application
+│ ├── src/ // Source code
+│ │ ├── app/ // Angular components, services, etc.
+│ │ ├── assets/ // Static assets like images, fonts, etc.
+│ │ ├── environments/ // Environment-specific configuration files
+│ │ ├── ...
+│ │ └── index.html // Entry HTML file for Angular app
+│ ├── angular.json // Angular project configuration
+│ ├── package.json // Frontend dependencies and scripts
+│ └── ...
+│
+└── ...
+
+
+- The backend app is structured as follows:
+
+user_form/
+│
+├── backend-app/ // JSON Server backend
+│ ├── db.json // JSON file containing database data
+│ ├── node_modules/ // Node.js modules (automatically generated)
+│ ├── package.json // Backend dependencies and scripts
+│ ├── server.js // Entry point for JSON Server
+│ └── ...
+│
+└── ...
 
