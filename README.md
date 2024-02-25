@@ -14,6 +14,38 @@ The User Form application is designed to provide a user registration and login s
 - JSON Server backend for storing user data
 - Angular frontend for user interaction
 
+## Development for frontend-side
+
+To run the frontend app locally, follow these steps:
+
+1. Navigate to the `frontend-app` directory.
+2. Install dependencies using `npm install`.
+3. Start the development server using `npm run start`.
+4. Open a web browser and navigate to `http://localhost:4200/` to view the app.
+
+## Deployment for frontend-side
+
+To deploy the frontend app, follow these steps:
+
+1. Build the app using `ng build`.
+2. Deploy the generated `dist` directory to your hosting provider.
+
+## Development for Backend-side
+
+To run the backend app locally, follow these steps:
+
+1. Navigate to the `backend-app` directory.
+2. Install dependencies using `npm install`.
+3. Start the JSON Server using `json-server --watch <file name>`.
+4. The server will be accessible at `http://localhost:3000/`.
+
+## Deployment for Backend-side
+
+To deploy the backend app, follow these steps:
+
+1. Deploy the entire `backend-app` directory to your hosting provider.
+2. Ensure that the `db.json` file is included and accessible to the server.
+
 
 ## Additional Information
 - For more information about Angular, refer to the [Angular documentation](https://angular.io/docs).
@@ -44,36 +76,4 @@ To run the User Form application locally, follow these steps:
     => To start the frontend Angular application:
        cd frontend-app
        npm run start
-
-##  folder Structure
-- The frontend app is structured as follows: 
-
-user_form/
-│
-├── frontend-app/ // Angular frontend application
-│ ├── src/ // Source code
-│ │ ├── app/ // Angular components, services, etc.
-│ │ ├── assets/ // Static assets like images, fonts, etc.
-│ │ ├── environments/ // Environment-specific configuration files
-│ │ ├── ...
-│ │ └── index.html // Entry HTML file for Angular app
-│ ├── angular.json // Angular project configuration
-│ ├── package.json // Frontend dependencies and scripts
-│ └── ...
-│
-└── ...
-
-
-- The backend app is structured as follows:
-
-user_form/
-│
-├── backend-app/ // JSON Server backend
-│ ├── db.json // JSON file containing database data
-│ ├── node_modules/ // Node.js modules (automatically generated)
-│ ├── package.json // Backend dependencies and scripts
-│ ├── server.js // Entry point for JSON Server
-│ └── ...
-│
-└── ...
 
